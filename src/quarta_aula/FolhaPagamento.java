@@ -1,4 +1,4 @@
-package terceira_aula.exercicio_quarta_aula;
+package quarta_aula;
 
 public class FolhaPagamento {
 

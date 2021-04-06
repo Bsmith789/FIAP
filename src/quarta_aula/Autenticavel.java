@@ -1,4 +1,4 @@
-package terceira_aula.exercicio_quarta_aula;
+package quarta_aula;
 
 public interface Autenticavel {
     public void setSenha(String senha);

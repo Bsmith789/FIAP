@@ -1,4 +1,4 @@
-package terceira_aula.exercicio_quarta_aula;
+package quarta_aula;
 
 public final class Presidente extends Empregado implements Autenticavel {
 
