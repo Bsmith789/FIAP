@@ -1,6 +1,6 @@
 package segunda_aula.exercicio;
 
-public class Jogador {
+public abstract class Jogador {
     private String nome;
     private int xp;
     private int hp;
@@ -36,6 +36,10 @@ public class Jogador {
 
     public void setHp(int hp) {
         this.hp = hp;
+    }
+
+    public void mover(int x, int y){
+        System.out.println("Movendo");
     }
 
     public boolean isEnvenenado() {

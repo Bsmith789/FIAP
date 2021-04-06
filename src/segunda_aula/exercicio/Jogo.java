@@ -1,10 +1,11 @@
 package segunda_aula.exercicio;
 
+import quinta_aula.exercicio.Guerreiro;
 import segunda_aula.exercicio.Jogador;
 
 public class Jogo {
     public static void main(String[] args) {
-        Jogador player = new Jogador("Tibrion");
+        Jogador player = new Guerreiro();
         player.setXp(100);
         player.setHp(100);
         System.out.println("O XP do Jogador: " + player.getNome() + " é: " + player.getXp());

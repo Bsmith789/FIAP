@@ -1,4 +1,4 @@
-package terceira_aula.exercicio;
+package terceira_aula.exercicio_quarta_aula;
 
 public class Engenheiro extends Empregado implements Autenticavel {
 
