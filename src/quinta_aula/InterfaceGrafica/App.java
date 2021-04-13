@@ -1,31 +1,56 @@
 package quinta_aula.InterfaceGrafica;
 
+import app.StarRater;
+
 import javax.swing.*;
 import java.awt.*;
+import java.util.List;
 
 public class App {
     public static void main(String[] args) {
-        //JFrame cria a janela
-        JFrame janela = new JFrame("Meu app");
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        } catch(Exception e){
+            JOptionPane.showMessageDialog(null, "Erro ao carregar a aparencia");
+        }
+        JFrame frame = new JFrame();
 
-        JPanel panel = new JPanel(new GridLayout(2,2));
-        //Adicionando o texto Bem vindo ao painel
-        panel.add(new MeuLabel("Bem vindo"));
-        //Adicionando o campo de texto ao painel
-        panel.add(new MeuTextField());
-        //Adicionando uma área ao painel
-        panel.add(new MeuTextArea());
+        JPanel janela = new JPanel();
+        janela.setLayout(new FlowLayout());
 
-        //Adicionando o painel a janela
-        janela.add(panel, BorderLayout.CENTER);
+        janela.add(new MeuTextArea());
         //Adicionando uma caixa de checagem a janela
         janela.add(new MeuCheckBox("Aceito os termos do contrato"), BorderLayout.SOUTH);
 
+        List<String> listaDeOpcoes = List.of("Boleto", "Cartão");
+        MeuRadioGroup group = new MeuRadioGroup(listaDeOpcoes);
+        janela.add(group);
+
+        String[] cidades = {"São Paulo" , "Osasco" , "Diadema"};
+        janela.add(new JComboBox<String>(cidades));
+
+        janela.add(new StarRater(5));
+
+        JButton botao = new JButton("Salvar");
+        botao.addActionListener(new BotaoListener());
+        botao.addMouseListener(new BotaoListener());
+        JPanel painelBotao = new JPanel(new FlowLayout());
+        painelBotao.add(botao);
+
+        JPanel cadastro = new JPanel();
+        cadastro.add(new JLabel(new ImageIcon("C:\\Users\\gabil\\OneDrive\\Documentos\\RPG\\Monstros\\Lux.jpg")));
+
+        JTabbedPane abas = new JTabbedPane();
+        abas.add("Meu App", janela);
+        abas.add("Cadastro", cadastro);
+        abas.add("Perfil", painelBotao);
+        frame.add(abas);
+
         //Fechar a aplicação ao fechar a janela aberta
-        janela.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         //Colocar o tamanho da janela
-        janela.setSize(1000,600);
+        frame.setSize(1000,600);
         //Mostrar a tela na máquina
-        janela.setVisible(true);
+        frame.setVisible(true);
     }
 }
