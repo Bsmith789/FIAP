@@ -6,8 +6,8 @@ public class MeuTextArea extends JTextArea {
 
     private static final long serialVersionUID = 1L;
 
-    private int colunas = 30;
-    private int linhas = 5;
+    private int colunas = 10;
+    private int linhas = 3;
 
     public MeuTextArea() {
         super();

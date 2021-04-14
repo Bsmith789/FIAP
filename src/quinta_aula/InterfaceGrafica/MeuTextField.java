@@ -1,6 +1,7 @@
 package quinta_aula.InterfaceGrafica;
 
 import javax.swing.*;
+import javax.swing.border.LineBorder;
 import java.awt.*;
 
 public class MeuTextField extends JTextField {
@@ -14,6 +15,8 @@ public class MeuTextField extends JTextField {
 
     private void init(){
         this.setPreferredSize(new Dimension(200,30));
-        this.setBorder(BorderFactory.criar());
+        this.setBackground(Color.WHITE);
+        this.setForeground(new Color(0,0,92));
+        this.setBorder(new LineBorder(new Color(0,0,92)));
     }
 }
