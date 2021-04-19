@@ -7,6 +7,6 @@ import java.awt.*;
 public abstract class BorderFactory {
 
     public static Border criar(){
-        return new LineBorder(new Color(155,20,120));
+        return new LineBorder(new Color(0,0,92));
     }
 }

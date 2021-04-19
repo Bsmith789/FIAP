@@ -32,8 +32,6 @@ public class App {
         janela.add(new StarRater(5));
 
         JButton botao = new JButton("Salvar");
-        botao.addActionListener(new BotaoListener());
-        botao.addMouseListener(new BotaoListener());
         JPanel painelBotao = new JPanel(new FlowLayout());
         painelBotao.add(botao);
 

@@ -7,9 +7,25 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 public class BotaoListener implements ActionListener, MouseListener {
+    private MeuTextField tituloFilme;
+    private MeuTextArea sinopseFilme;
+    private MeuRadioGroup group;
+    private MeuCheckBox assistido;
+    private app.StarRater avaliacaoEstrelas;
+
     @Override
     public void actionPerformed(ActionEvent e) {
-        JOptionPane.showMessageDialog(null, "Dados salvos com sucesso");
+        JOptionPane.showMessageDialog(null, "Título do filme: " + tituloFilme.getText() + "\nSinopse do Filme: " + sinopseFilme.getText()
+        + "\nOnde assistir: " + group + "\nAssistido: " + assistido + "\nAvaliação: " + avaliacaoEstrelas.getSelection());
+    }
+
+
+    public BotaoListener(MeuTextField tituloFilme, MeuTextArea sinopseFilme, MeuRadioGroup group, MeuCheckBox assistido, app.StarRater avaliacaoEstrelas){
+        this.tituloFilme = tituloFilme;
+        this.sinopseFilme = sinopseFilme;
+        this.group = group;
+        this.assistido = assistido;
+        this.avaliacaoEstrelas = avaliacaoEstrelas;
     }
 
     @Override
