@@ -9,7 +9,7 @@ public class MeuLabel extends JLabel {
     //Versão do Label, apenas para tirar aviso de Warning
     private static final long serialVersionUID = 1L;
 
-    private int size = 26;
+    private int size = 18;
     private Color cor = new Color(199,4,92);
 
     public MeuLabel(String texto) {

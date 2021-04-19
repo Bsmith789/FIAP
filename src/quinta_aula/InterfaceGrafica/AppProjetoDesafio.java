@@ -16,14 +16,14 @@ public class AppProjetoDesafio {
         }
 
         JFrame frame = new JFrame("Fiap Movies");
-        frame.setLayout(new GridLayout(0,3));
+        frame.setLayout(new BorderLayout());
 
         JPanel imagem = new JPanel();
         imagem.setLayout(new FlowLayout());
         imagem.add(new JLabel(new ImageIcon("C:\\Users\\gabil\\OneDrive\\Documentos\\Workspace\\Imagem para Fiap\\Filme1.png")));
 
         JPanel cadastro = new JPanel();
-        cadastro.setLayout(new FlowLayout());
+        cadastro.setLayout(new GridLayout(6,0));
         cadastro.add(new MeuLabel("Titulo"));
         cadastro.add(new MeuTextField());
         cadastro.add(new MeuLabel("Sinopse"));
@@ -33,7 +33,7 @@ public class AppProjetoDesafio {
         cadastro.add(new JComboBox<String>(genero));
 
         JPanel cinema = new JPanel();
-        cinema.setLayout(new FlowLayout());
+        cinema.setLayout(new GridLayout(5,0));
         cinema.add(new MeuLabel("Onde assistir"));
         List<String> listaDeOpcoes = List.of("Netflix", "Prime Video", "Pirate Bay");
         MeuRadioGroup group = new MeuRadioGroup(listaDeOpcoes);
@@ -54,7 +54,8 @@ public class AppProjetoDesafio {
 
 
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        frame.setSize(800,600);
+        frame.setSize(600,300);
         frame.setVisible(true);
+        frame.pack();
     }
 }
