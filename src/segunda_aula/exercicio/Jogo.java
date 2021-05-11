@@ -1,7 +1,6 @@
 package segunda_aula.exercicio;
 
-import quinta_aula.exercicio.Guerreiro;
-import segunda_aula.exercicio.Jogador;
+import quinta_sexta_aula.exercicio.Guerreiro;
 
 public class Jogo {
     public static void main(String[] args) {
